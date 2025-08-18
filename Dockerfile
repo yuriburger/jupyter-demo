@@ -18,6 +18,8 @@ COPY . ${HOME}
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+ENV PIP_EXTRA_INDEX_URL=""
+
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
